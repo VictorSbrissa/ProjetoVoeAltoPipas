@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="VoeAlto Pipas - Loja online de pipas e acessórios de qualidade.">
+    <meta name="author" content="VoeAlto Pipas">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" href="/Front/Imagens/Logo_VoeAlto-removebg-preview.png">
+    <link rel="stylesheet" href="../Saas/StyleHome.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap" rel="stylesheet">
+    <title>VoeAlto Pipas</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="../Imagens/Logo_VoeAlto.png" alt="Logo da VoeAlto Pipas" class="logoVoe">
+        </div>
+        <div class="topMenu">
+            <nav>
+                <ul>
+                    <li><a href="HOME.html">Início</a></li>
+                    <li><a href="LOGIN.html">Login</a></li>
+                    <li><a href="SOBRENOS.html">Sobre nós</a></li>
+                    <li><a href="https://www.instagram.com/voealtopipas" target="_blank" rel="noopener noreferrer">Loja</a></li>
+                    <li><a href="https://chat.whatsapp.com/KHwvVsVdBsv6VghnC9d8dj" target="_blank" rel="noopener noreferrer">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="containerHorizontal">
+            <section class="sobreNos">
+                <h1 class="tituloSobreNos">Bem-vindo à VoeAlto Pipas</h1>
+                <p>
+                    <p>Em nossa loja, os bons ventos do interior paulista ganham vida!<p>
+                    Os irmãos Augusto e Eriberto trazem pipas de qualidade para colorir o céu e
+                    a sua diversão!
+                <p>
+                    <span class="altoNoCeu">Alto no céu, alto na diversão!</span>
+            </section>
+            <section class="carrossel">
+                <div class="carrossel-containerCarrossel">
+                    <button class="nav-btnCarrossel prevCarrossel" onclick="mudarSlide(-1)">&#10094;</button>
+                    <div class="slidesCarrossel" id="slides">
+                        <div class="slideCarrossel"><img src="../Imagens/Carrosel1.jpg" alt="Slide 1"></div>
+                        <div class="slideCarrossel"><img src="../Imagens/Carrosel2.jpg" alt="Slide 2"></div>
+                        <div class="slideCarrossel"><img src="../Imagens/Carrosel3.jpg" alt="Slide 3"></div>
+                    </div>
+                    <button class="nav-btnCarrossel nextCarrossel" onclick="mudarSlide(1)">&#10095;</button>
+                </div>
+            </section>
+        </section>
+
+        <section class="categoriaPai">
+                <div class="categoria" onclick="toggleProdutos('produtosPipas')">
+                    <h2>Pipas</h2>
+                    <p>Modelos variados e coloridos para todas as idades.</p>
+                </div>
+                <div class="categoria" onclick="toggleProdutos('produtosLinha')">
+                    <h2>Linhas</h2>
+                    <p>Alta qualidade e resistência para melhor performance.</p>
+                </div>
+                <div class="categoria" onclick="toggleProdutos('produtosCarretel')">
+                    <h2>Carretéis</h2>
+                    <p>Ergonômicos e fáceis de manusear.</p>
+                </div>
+                <div class="categoria" onclick="toggleProdutos('produtosAcessorio')">
+                    <h2>Acessórios</h2>
+                    <p>Itens indispensáveis para seu kit de pipa.</p>
+                </div>
+            </section>
+
+            <section class="produtos" id="produtosPipas">
+               
+            </section>
+
+            
+            <section class="produtos" id="produtosLinha">
+                
+            </section>
+
+            <section class="produtos" id="produtosCarretel">
+                
+            </section>
+
+            <section class="produtos" id="produtosAcessorio">
+                
+            </section>
+
+            <div class="carrinho">
+                <h4 id="tituloLista" style="display: none;">Lista de desejos:</h4>
+                <ul id="listaDesejo"></ul>
+                <button id="removerBotao" onclick="clearCart()" style="display: none;">Limpar Lista de Desejos</button>
+                <button id="enviarListaBtn" onclick="sendWishlistToWhatsApp()" style="display: none;">Enviar lista de desejos no whatsapp!</button>
+            </div>
+    </main>
+
+    <footer class="footerC">
+        <p>&copy; 2025 VoeAlto Pipas - Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+
+        let index = 0;
+
+        function mudarSlide(direcao) {
+            const slides = document.getElementById('slides');
+            const totalSlides = slides.children.length;
+            index = (index + direcao + totalSlides) % totalSlides;
+            slides.style.transform = `translateX(-${index * 100}%)`;
+        }
+        
+        async function carregarProdutos() {
+            try {
+               
+                const response = await fetch('https://localhost:7247/api/Produto');
+
+                if (response.ok) {
+                    const produtos = await response.json(); 
+                    const section = document.getElementById('produtosPipas');
+                    section.innerHTML = ''; 
+                    produtos.forEach(produto => {
+                        const divProduto = document.createElement('div');
+                        divProduto.classList.add('produto');
+
+                        divProduto.innerHTML = `
+                            <img src="../../${produto.imagemUrl}" alt="${produto.nome}">
+                            <h1>${produto.nome}</h1>
+                            <h3>${produto.preco.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</h3>
+                            <h4 class="card-descricao">${produto.descricao}</h4>
+                            <button onclick="addToCart(this, '${produto.nome}')">Disponivel - chama no Whats</button>
+                        `;
+                        section.appendChild(divProduto);
+                    });
+                } else {
+                    console.error('Erro ao carregar os produtos');
+                }
+            } catch (error) {
+                console.error('Erro na requisição:', error);
+            }
+        }
+        window.onload = carregarProdutos;
+    </script>
+</body>
+
+</html>

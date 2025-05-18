@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Produto</title>
+    <link rel="stylesheet" href="../Saas/StyleCadastro.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Cadastro de Produto</h1>
+        <form id="formCadastro" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="nome">Nome do Produto:</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+
+            <div class="form-group">
+                <label for="preco">Preço:</label>
+                <input type="number" id="preco" name="preco" step="0.01" required>
+            </div>
+
+            <div class="form-group">
+                <label for="descricao">Descrição:</label>
+                <textarea id="descricao" name="descricao" required></textarea>
+            </div>
+
+             Comentado: Removendo o campo de imagem por enquanto 
+            <div class="form-group">
+                <label for="imagem">Imagem do Produto:</label>
+                <input type="file" id="imagem" name="imagem" accept="image/*" required>
+            </div>
+
+            <button type="submit">Cadastrar Produto</button>
+        </form>
+    </div>
+
+    <script src="../JS/CadastroProdutos.js"></script>
+</body>
+
+</html>

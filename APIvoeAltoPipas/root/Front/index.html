@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/Front/Imagens/Logo_VoeAlto-removebg-preview.png">
+    <link rel="stylesheet" type="text/css" href="EstiloPag.css" media="screen" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>VoeAlto Pipas</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="/Front/Imagens/Voe_AltoCfundo-removebg-preview.png" alt="logo_voe" class="logoVoe">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="comprar.html">Comprar</a></li>
+                <li><a href="https://www.instagram.com/voealtopipas?igsh=MTg2bWcyY2p5dTB1bQ==" target="blank">Loja</a></li>
+                <li><a href="https://chat.whatsapp.com/KHwvVsVdBsv6VghnC9d8dj?fbclid=PAZXh0bgNhZW0CMTEAAaasoLVzr_t6qclEOxuEDv4fiHVbBr9V2CGEoCRMLKnxHrM-zqLySHT-jNo_aem_TRY5ZSWVoy52ZtXBpvQgLA" target="blank">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <span class="sobreNos">
+        <p>
+            <strong class="tituloSobreNos">Bem vindo a VoeAlto Pipas</strong><br>
+            Na nossa loja, os ventos do interior paulista ganham vida!<br> Os irmãos Augusto e
+            Eriberto trazem pipas de qualidade para colorir o céu e a sua diversão!<br>
+            <strong class="altoNoCeu">Alto no céu, <br> alto na diversão!</strong><br><a href="comprar.html" class="botaoSaiba">Saiba mais</a>
+        </p>
+        <img src="/Front/Imagens/Pipa_RoxaMetade.gif" alt="pipa_voe" class="spanFoto">
+    </span>
+    <section class="corpo">
+        <div class="corpoEsquerda">
+            <hr class="substituloRisco">
+            <p>
+                <strong class="subtitulo">Tudo para sua pipa voar alto!</strong><br>
+                Encontre pipas de todos os tipos, linhas e <br> acessórios para elevar sua diversão ao máximo.<br>
+                Qualidade e tradição da VoeAlto Pipas
+                para você!
+            </p><br>
+            <div class="divBack"><img src="/Front/Imagens/pipaFlamengoCerta.gif" class="pipaFlamengo"></div>
+        </div>
+        <div class="corpoDireita">
+            <table>
+                <tr>
+                    <th><img src="/Front/Imagens/pipas-removebg-preview.png"></th>
+                    <th><img src="/Front/Imagens/linhas-removebg-preview.png"></th>
+                </tr>
+                <tr>
+                    <td><strong class="tituloColuna">Pipas</strong><br><hr class="pulo"> coloridos e<br>aerodinâmicos para voos<br>emocionantes!</td>
+                    <td><strong class="tituloColuna">Linhas</strong><br><hr class="pulo">Resistência e precisão para<br>manobras incríveis no céu</td>
+                </tr>
+                <tr>
+                    <th><img src="/Front/Imagens/carretilhas-removebg-preview.png"></th>
+                    <th><img src="/Front/Imagens/acessórios-removebg-preview.png"></th>
+                </tr>
+                <tr>
+                    <td><strong class="tituloColuna">Carretilhas</strong><br><hr class="pulo">Controle total para soltar e <br>recolher sua pipa com<br>facilidade.</td>
+                    <td><strong class="tituloColuna">Acessórios</strong><br><hr class="pulo">Tudo o que você precisa<br>para turbinar sua diversão<br>no ar!</td>
+                </tr>
+            </table>
+            <hr class="substituloRisco">
+            <p><strong class="subtitulo">Pipas: Cores e Emoção no Céu!</strong><br>Nossas pipas são feitas para voar alto e<br>proporcionar momentos inesquecíveis.<br>Modelos leves, resistentes e cheios de<br>estilo para você dominar o vento com<br>diversão!</p>
+        </div>
+    </section>
+    <footer>
+        <div class="footerCentro">
+            <hr class="substituloRisco">
+            <div class="corpo">
+                <p><strong class="subtitulo">Linhas: Precisão e Resistência para<br>Grandes Voos!</strong><br>Oferecemos linhas de alta qualidade<br>para garantir o controle e a segurança da<br>sua pipa. Seja para manobras radicais ou<br>apenas para curtir o céu, aqui você<br>encontra a melhor opção!</p>
+                <div>
+                    <img src="/Front/Imagens/LinhaCerta.gif" class="imagemFooter">
+                </div>
+            </div>
+        </div>
+        <div class="acessoCatologo">
+            <hr class="riscoMaior">
+            <h1>Acesse o catálogo!</h1>
+            <a class="botaoNavegar" onclick="window.location.href='comprar.html';">Navergar</a>
+            <a href="#" id="botaoComprar" class="botaoComprar">Comprar</a>
+        </div>
+    </footer>
+</body>
+</html>
+<script>
+    const botaoComprar = document.getElementById('botaoComprar');
+
+    // Adicionando o evento de click ao botão
+    botaoComprar.addEventListener('click', function (event) {
+        event.preventDefault(); // Previne o comportamento padrão do link (caso seja um link)
+
+        // Exemplo de chamada à API ao clicar no botão
+        fetch('https://localhost:7247/api/Produto', { // Substitua por seu servidor real se necessário
+            method: 'GET', // Método GET conforme o curl
+            headers: {
+                'accept': '*/*' // Cabeçalho conforme o curl
+            }
+        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Erro na resposta da API');
+                }
+                return response.json();
+            })
+            .then(data => {
+                // Aqui você pode processar os dados recebidos
+                console.log('Dados da API:', data);
+
+                // Exibindo o retorno da API em um alert
+                let mensagem = "";
+                data.forEach(produto => {
+                    mensagem += `Nome: ${produto.nome}\nPreço: R$ ${produto.preco.toFixed(2)}\nDescrição: ${produto.descricao}\n\n`;
+                });
+
+                // Exibindo o alerta com os dados
+                alert(mensagem);
+            })
+            .catch(error => {
+                console.error('Erro ao chamar a API:', error);
+            });
+    });
+</script>

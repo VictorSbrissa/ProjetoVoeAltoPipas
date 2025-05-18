@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/Front/Imagens/Logo_VoeAlto-removebg-preview.png">
+    <link rel="stylesheet" type="text/css" href="EstiloPag.css" media="screen" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <title>VoeAlto Pipas</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="/Front/Imagens/Voe_AltoCfundo-removebg-preview.png" alt="logo_voe" class="logoVoe">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="comprar.html">Comprar</a></li>
+                <li><a href="https://www.instagram.com/voealtopipas?igsh=MTg2bWcyY2p5dTB1bQ==" target="blank">Loja</a>
+                </li>
+                <li><a href="https://chat.whatsapp.com/KHwvVsVdBsv6VghnC9d8dj?fbclid=PAZXh0bgNhZW0CMTEAAaasoLVzr_t6qclEOxuEDv4fiHVbBr9V2CGEoCRMLKnxHrM-zqLySHT-jNo_aem_TRY5ZSWVoy52ZtXBpvQgLA"
+                        target="blank">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <span class="sobreNos">
+        <p><strong class="tituloSobreNos">Bem vindo a VoeAlto Pipas</strong><br>
+            Na nossa loja, os ventos do interior paulista ganham vida!<br> Os irmãos Augusto e
+            Eriberto trazem pipas de qualidade para colorir o céu e a sua diversão!<br>
+            <strong class="altoNoCeu">Alto no céu, <br> alto na diversão!</strong>
+        </p>
+        <img src="/Front/Imagens/Pipa_RoxaMetade.gif" alt="pipa_voe" class="spanFoto">
+    </span>
+    <div class="categoriaPai">
+        <div class="categoria" onclick="toggleProdutos('produtosPipas')">
+            <h2>Pipas</h2>
+            <p>Modelos variados e coloridos para todas as idades.</p>
+        </div>
+        <div class="categoria" onclick="toggleProdutos('produtosLinha')">
+            <h2>Linhas</h2>
+            <p>Alta qualidade e resistência para melhor performance.</p>
+        </div>
+        <div class="categoria" onclick="toggleProdutos('produtosCarretel')">
+            <h2>Carretéis</h2>
+            <p>Ergonômicos e fáceis de manusear.</p>
+        </div>
+        <div class="categoria" onclick="toggleProdutos('produtosAcessorio')">
+            <h2>Acessórios</h2>
+            <p>Itens indispensáveis para seu kit de pipa.</p>
+        </div>
+    </div>
+    <section class="produtos" id="produtosPipas">
+        <div class="produto">
+            <img src="Imagens/pipaFlamengoCerta.gif" alt="Pipa Colorida">
+            <h3>Pipa Colorida</h3>
+            <p>R$15,00</p>
+            <input type="number" min="1" value="1" class="quantidade">
+            <button onclick="addToCart(this, 'Pipa Colorida')">Adicionar à lista de desejos</button>
+        </div>
+        <div class="produto">
+            <img src="Imagens/pipaRoxaCerta.gif" alt="Pipa Radical">
+            <h3>Pipa Radical</h3>
+            <p>R$20,00</p>
+            <input type="number" min="1" value="1" class="quantidade">
+            <button onclick="addToCart(this, 'Pipa Radical')">Adicionar à lista de desejos</button>
+        </div>
+        <div class="produto">
+            <img src="Imagens/D_NQ_NP_698380-MLB45839494496_052021-O-removebg-preview.png" alt="Pipa Estilizada">
+            <h3>Pipa Estilizada</h3>
+            <p>R$18,00</p>
+            <input type="number" min="1" value="1" class="quantidade">
+            <button onclick="addToCart(this, 'Pipa Estilizada')">Adicionar à lista de desejos</button>
+        </div>
+        <div class="produto">
+            <img src="Imagens/pipaRoxaCerta.gif" alt="Pipa Radical">
+            <h3>Pipa Radical</h3>
+            <p>R$20,00</p>
+            <input type="number" min="1" value="1" class="quantidade">
+            <button onclick="addToCart(this, 'Pipa Radical')">Adicionar à lista de desejos</button>
+        </div>
+    </section>
+    <section class="produtos" id="produtos">
+        <div class="produto">
+            <img src="Imagens/pipaFlamengoCerta.gif" alt="Pipa Colorida">
+            <h3>Pipa Colorida</h3>
+            <p>R$15,00</p>
+            <input type="number" min="1" value="1" class="quantidade">
+            <button onclick="addToCart(this, 'Pipa Colorida')">Adicionar à lista de desejos</button>
+        </div>
+        <div class="produto">
+            <img src="Imagens/pipaRoxaCerta.gif" alt="Pipa Radical">
+            <h3>Pipa Radical</h3>
+            <p>R$20,00</p>
+            <input type="number" min="1" value="1" class="quantidade">
+            <button onclick="addToCart(this, 'Pipa Radical')">Adicionar à lista de desejos</button>
+        </div>
+        <div class="produto">
+            <img src="Imagens/D_NQ_NP_698380-MLB45839494496_052021-O-removebg-preview.png" alt="Pipa Estilizada">
+            <h3>Pipa Estilizada</h3>
+            <p>R$18,00</p>
+            <input type="number" min="1" value="1" class="quantidade">
+            <button onclick="addToCart(this, 'Pipa Estilizada')">Adicionar à lista de desejos</button>
+        </div>
+    </section>
+    <section class="produtos" id="produtosLinha">
+        <div class="produto">
+            <img src="/Front/Imagens/LinhaC.jpg" alt="Linha Colorida">
+            <h3>Linha colorida</h3>
+            <p>R$15,00</p>
+            <input type="number" min="1" value="1" class="quantidade">
+            <button onclick="addToCart(this, 'Linha colorida')">Adicionar à lista de desejos</button>
+        </div>
+        <div class="produto">
+            <img src="/Front/Imagens/LinhaB.jpg" alt="Linha Radical">
+            <h3>Linha resistente</h3>
+            <p>R$20,00</p>
+            <input type="number" min="1" value="1" class="quantidade">
+            <button onclick="addToCart(this, 'Linha resistente')">Adicionar à lista de desejos</button>
+        </div>
+        <div class="produto">
+            <img src="/Front/Imagens/LinhaA.webp" alt="Linha Estilizada">
+            <h3>Linha leve</h3>
+            <p>R$18,00</p>
+            <input type="number" min="1" value="1" class="quantidade">
+            <button onclick="addToCart(this, 'Linha leve')">Adicionar à lista de desejos</button>
+        </div>
+    </section>
+    <section class="produtos" id="produtosCarretel">
+        <div class="produto">
+            <img src="/Front/Imagens/carretelA.jpg" alt="Pipa Colorida">
+            <h3>Carretel Colorida</h3>
+            <p>R$15,00</p>
+            <input type="number" min="1" value="1" class="quantidade">
+            <button onclick="addToCart(this, 'Carretel Colorida')">Adicionar à lista de desejos</button>
+        </div>
+        <div class="produto">
+            <img src="/Front/Imagens/carretelB.webp" alt="Carretel Radical">
+            <h3>Carretel Radical</h3>
+            <p>R$20,00</p>
+            <input type="number" min="1" value="1" class="quantidade">
+            <button onclick="addToCart(this, 'Carretel Radical')">Adicionar à lista de desejos</button>
+        </div>
+        <div class="produto">
+            <img src="/Front/Imagens/CarretelC.jpg" alt="Carretel Estilizada">
+            <h3>Carretel Estilizada</h3>
+            <p>R$18,00</p>
+            <input type="number" min="1" value="1" class="quantidade">
+            <button onclick="addToCart(this, 'Carretel Estilizada')">Adicionar à lista de desejos</button>
+        </div>
+    </section>
+    <section class="produtos" id="produtosAcessorio">
+        <div class="produto">
+            <img src="/Front/Imagens/rabiola.webp" alt="Pipa Colorida">
+            <h3>Rabiola Colorida</h3>
+            <p>R$15,00</p>
+            <input type="number" min="1" value="1" class="quantidade">
+            <button onclick="addToCart(this, 'Rabiola Colorida')">Adicionar à lista de desejos</button>
+        </div>
+        </div>
+    </section>
+    <div class="carrinho">
+        <h4 class="carrinho" id="tituloLista" style="display: none;">Lista de desejos:</h4><br>
+    </div>
+    <div class="carrinho">
+        <ul id="listaDesejo"></ul>
+    </div>
+    <div class="carrinho">
+        <button class="removerBotao" id="removerBotao" onclick="clearCart()" style="display: none;">Limpar Lista de
+            Desejos</button>
+    </div>
+    <div class="enviarBotao">
+        <button class="botaoZAP" id="enviarListaBtn" onclick="sendWishlistToWhatsApp()" style="display: none;">Enviar
+            lista de desejos no whatsapp!</button>
+    </div>
+
+    <div class="footerC">&copy; 2025 VoeAlto Pipas - Todos os direitos reservados.</div>
+    <script>
+        let shoppingList = JSON.parse(localStorage.getItem("shoppingList")) || [];
+
+        function addToCart(button, productName) {
+            let quantityInput = button.previousElementSibling;
+            let quantity = parseInt(quantityInput.value) || 1;
+
+            let existingItem = shoppingList.find(item => item.name === productName);
+            if (existingItem) {
+                existingItem.quantity += quantity;
+            } else {
+                shoppingList.push({ name: productName, quantity: quantity });
+            }
+
+            localStorage.setItem("shoppingList", JSON.stringify(shoppingList));
+            updateShoppingListDisplay();
+
+            button.innerText = "Adicionado!";
+            button.style.backgroundColor = "#4CAF50";
+            setTimeout(() => {
+                button.innerText = "Adicionar à lista de desejos";
+                button.style.backgroundColor = "";
+            }, 2000);
+        }
+        function updateShoppingListDisplay() {
+            const listElement = document.getElementById("listaDesejo");
+            const clearCartBtn = document.getElementById("removerBotao");
+            const tituloLista = document.getElementById("tituloLista");
+            const enviarListaBtn = document.getElementById("enviarListaBtn");
+
+            if (!listElement || !clearCartBtn || !tituloLista || !enviarListaBtn) return;
+
+            listElement.innerHTML = "";
+
+            if (shoppingList.length > 0) {
+                clearCartBtn.style.display = "block";
+                tituloLista.style.display = "block";
+                enviarListaBtn.style.display = "block";
+
+                shoppingList.forEach((item, index) => {
+                    const li = document.createElement("li");
+                    li.innerHTML = `
+                ${item.name} (x${item.quantity}) 
+                <button class="btn-menos" onclick="removeFromCart(${index})">-</button>
+                <button class="btn-mais" onclick="addOne(${index})">+</button>
+            `;
+                    listElement.appendChild(li);
+                });
+            } else {
+                clearCartBtn.style.display = "none";
+                tituloLista.style.display = "none";
+                enviarListaBtn.style.display = "none";
+            }
+        }
+        function removeFromCart(index) {
+            if (shoppingList[index].quantity > 1) {
+                shoppingList[index].quantity -= 1;
+            } else {
+                shoppingList.splice(index, 1);
+            }
+
+            localStorage.setItem("shoppingList", JSON.stringify(shoppingList));
+            updateShoppingListDisplay();
+        }
+
+        function addOne(index) {
+            shoppingList[index].quantity += 1;
+            localStorage.setItem("shoppingList", JSON.stringify(shoppingList));
+            updateShoppingListDisplay();
+        }
+
+        function clearCart() {
+            shoppingList = [];
+            localStorage.setItem("shoppingList", JSON.stringify(shoppingList));
+            updateShoppingListDisplay();
+        }
+
+        window.onload = function () {
+            updateShoppingListDisplay();
+        };
+        function sendWishlistToWhatsApp() {
+            if (shoppingList.length === 0) return;
+
+            let message = "🛒 *Lista de desejos - VoeAlto Pipas* 🪁\n\n";
+            shoppingList.forEach(item => {
+                message += `📌 ${item.name} (x${item.quantity})\n`;
+            });
+
+            message += "\nQuero saber mais sobre esses produtos!";
+
+            let phoneNumber = "5511971684117"; // Substitua pelo número correto da loja
+            let encodedMessage = encodeURIComponent(message);
+            let whatsappLink = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+            window.open(whatsappLink, "_blank");
+        }
+    </script>
+    <script>
+        window.onload = function () {
+            updateShoppingListDisplay();
+            toggleProdutos('produtosPipas');
+        };
+        function toggleProdutos(categoria) {
+            var categorias = ["produtosPipas", "produtosLinha", "produtosCarretel", "produtosAcessorio"];
+
+            categorias.forEach(function (id) {
+                var elemento = document.getElementById(id);
+                if (id === categoria) {
+                    // Alterna visibilidade apenas da categoria clicada
+                    if (elemento.classList.contains("ativo")) {
+                        elemento.classList.remove("ativo");
+                        setTimeout(() => { elemento.style.display = "none"; }, 500); // Aguarda a transição para esconder
+                    } else {
+                        elemento.style.display = "flex";
+                        setTimeout(() => { elemento.classList.add("ativo"); }, 10); // Pequeno delay para ativar opacidade
+                    }
+                } else {
+                    elemento.classList.remove("ativo");
+                    setTimeout(() => { elemento.style.display = "none"; }, 500);
+                }
+            });
+        }
+    </script>
+
+</body>
+
+</html>
