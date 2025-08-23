@@ -20,5 +20,5 @@ Using:
 We have an catalog to buy and connect people who looking for kite. We have simple navigation, modern layout, and an efficient backend architecture.
 </h4>
 <h4 align="center"> To be continue... </ha4>
-<h3 align="center" >👍🏼  How to reach me: www.linkedin.com/in/victor-sbrissa  👍🏼 </h3>
+<h3>👍🏼 To reach me: www.linkedin.com/in/victor-sbrissa </h3>
 
