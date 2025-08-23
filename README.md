@@ -7,7 +7,7 @@ To improve my .net Skills
 Using:
 </h4>
 </h4>
-<img align="right" alt="coding" width="400" src="https://49.media.tumblr.com/cd59b47fa25fe14552820593c2fefad2/tumblr_nnwh6sKG9n1rlapeio1_500.gif">
+<img align="right" alt="coding" width="400" src="https://cdn.dribbble.com/userupload/22224550/file/original-b856232fe38572f02cdb1752aa73da21.gif">
 <h4>
 <h3>All done in 24 hours of project, using DDD to manage modules and services.</h3>
 <h4>
