@@ -1,7 +1,7 @@
 # APIvoeAltoPipas
 
 <h2 align="center" >
-To improve my .net Skills
+To improve my project Skills
 </h2>
 <h4>
 Using:
