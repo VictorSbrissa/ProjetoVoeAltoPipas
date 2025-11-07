@@ -1,0 +1,39 @@
+# Diretórios de build e desenvolvimento
+**/.vs/
+**/.vscode/
+**/[Bb]in/
+**/[Oo]bj/
+**/[Dd]ebug/
+**/[Rr]elease/
+
+# Arquivos de desenvolvimento
+**/*.user
+**/*.userosscache
+**/*.dbmdl
+**/*.jfm
+
+# Git e controle de versão
+.git/
+.gitignore
+.gitattributes
+
+# Logs e dados temporários
+**/[Ll]ogs/
+**/[Ll]og/
+*.log
+
+# Arquivos de teste
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+*.VisualState.xml
+TestResult.xml
+nunit-*.xml
+
+# NuGet
+*.nupkg
+*.snupkg
+**/packages/
+
+# Não ignorar arquivos Docker na pasta docker/
+!docker/Dockerfile
+!docker/init.sql
